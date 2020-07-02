@@ -1,0 +1,3 @@
+C:/Users/Elb1to/CLionProjects/Trabajo3_DS1/cmake-build-debug/CMakeFiles/Trabajo3_DS1.dir
+C:/Users/Elb1to/CLionProjects/Trabajo3_DS1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Elb1to/CLionProjects/Trabajo3_DS1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
