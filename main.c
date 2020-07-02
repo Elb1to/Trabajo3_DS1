@@ -3,63 +3,29 @@
 #include <conio.h>
 #include <math.h>
 
-void costoDeLapices();
-
-void almacenFactory();
-
-void laDoniaRestaurante();
-
-void vinicultores();
-
-void viajeDeEstudios();
-
-void enviosDePaquetesInternacionales();
-
-void estacionamientosEstablecimiento();
-
-void descubrirMenorEdad();
-
-void becaUniversitaria();
-
-void sueldoSemanal();
-
 void numeroMayor();
-
 void sumaDeNumeros();
-
 void promedioDeEdades();
-
 void estaturaPromedio();
-
 void ahorroPorAnio();
-
 void diferenciasDeNumeros();
-
 void numeroPares();
-
 void sucesionFibonacci();
-
 void registroDeHoras();
-
 void distanciaEntreCarreteras();
-
-void horaHomo();
-
+void tikiTaka();
 void pagoEnCuotas();
-
 void pagoDeEmpresaPorSueldoSemanal();
-
 void interesesBancarios();
-
 void gerenteDeCompania();
 
 /*
  * Made with love by Victor Abrego (a.k.a Elb1to)
  * Github: https://github.com/Elb1to
- * Project repository: https://github.com/Elb1to/Trabajo2_DS1
+ * Project repository: https://github.com/Elb1to/Trabajo3_DS1
  *
- * Coded on May 25th of 2020
- * Latest commit: June 15th, 2020
+ * Coded on July 2nd of 2020
+ * Latest commit: June 2nd, 2020
  */
 
 int main() {
@@ -69,16 +35,21 @@ int main() {
     printf("\n\n\n[]===========================================[]\n\n");
     printf("Selecciona un algoritmo que desees probar.");
     printf("\n\n[]===========================================[]\n");
-    printf("1. Costo de lapices\n");
-    printf("2. Almacen Factory\n");
-    printf("3. Restaurante\n");
-    printf("4. Vinicultores\n");
-    printf("5. Viaje de estudios\n");
-    printf("6. Envio de paquetes internacional\n");
-    printf("7. Estacionamientos\n");
-    printf("8. Edad de 3 personas\n");
-    printf("9. Beca Universitaria\n");
-    printf("10. Sueldo semanal\n");
+    printf("1. Determinar numero mayor\n");
+    printf("2. Suma de 10 numeros\n");
+    printf("3. Edad promedio\n");
+    printf("4. Estatura promedio\n");
+    printf("5. Ahorro cada 12 meses\n");
+    printf("6. Determinar numeros positivos y negativos\n");
+    printf("7. Generar numeros pares\n");
+    printf("8. Sucesion de Fibonaci\n");
+    printf("9. Determinar total de horas trabajadas\n");
+    printf("10. Interseccion entre punto A y B\n");
+    printf("11. Tienda Tiki Taka\n");
+    printf("12. Compra al credito por 20 meses\n");
+    printf("13. Salario en base a horas trabajadas\n");
+    printf("14. Deposito bancario con intereses\n");
+    printf("15. Impuesto por automoviles\n");
     printf("[]===========================================[]\n");
     printf("\n\nIntroduzca el numero del algoritmo al que quiere ingresar y probar: ");
     scanf("%i", &selectOption);
@@ -86,512 +57,67 @@ int main() {
     switch (selectOption) {
         case 1:
             system("cls");
-            costoDeLapices();
+            numeroMayor();
             getch();
             break;
         case 2:
             system("cls");
-            almacenFactory();
+            sumaDeNumeros();
             getch();
             break;
         case 3:
             system("cls");
-            laDoniaRestaurante();
+            promedioDeEdades();
             break;
         case 4:
             system("cls");
-            vinicultores();
+            estaturaPromedio();
             break;
         case 5:
             system("cls");
-            viajeDeEstudios();
+            ahorroPorAnio();
             break;
         case 6:
             system("cls");
-            enviosDePaquetesInternacionales();
+            diferenciasDeNumeros();
             break;
         case 7:
             system("cls");
-            estacionamientosEstablecimiento();
+            numeroPares();
             break;
         case 8:
             system("cls");
-            descubrirMenorEdad();
+            sucesionFibonacci();
             break;
         case 9:
             system("cls");
-            becaUniversitaria();
+            registroDeHoras();
             break;
         case 10:
             system("cls");
-            sueldoSemanal();
+            distanciaEntreCarreteras();
             break;
         case 11:
             system("cls");
-            numeroMayor();
+            tikiTaka();
             break;
         case 12:
             system("cls");
-            sumaDeNumeros();
+            pagoEnCuotas();
             break;
         case 13:
             system("cls");
-            promedioDeEdades();
+            pagoDeEmpresaPorSueldoSemanal();
             break;
         case 14:
             system("cls");
-            estaturaPromedio();
-            break;
-        case 15:
-            system("cls");
-            ahorroPorAnio();
-            break;
-        case 16:
-            system("cls");
-            diferenciasDeNumeros();
-            break;
-        case 17:
-            system("cls");
-            numeroPares();
-            break;
-        case 18:
-            system("cls");
-            sucesionFibonacci();
-            break;
-        case 19:
-            system("cls");
-            registroDeHoras();
-            break;
-        case 20:
-            system("cls");
-            distanciaEntreCarreteras();
-            break;
-        case 21:
-            system("cls");
-            horaHomo();
-            break;
-        case 22:
-            system("cls");
-            pagoEnCuotas();
-            break;
-        case 23:
-            system("cls");
-            pagoDeEmpresaPorSueldoSemanal();
-            break;
-        case 24:
-            system("cls");
             interesesBancarios();
             break;
-        case 25:
+        case 15:
             system("cls");
             gerenteDeCompania();
             break;
     }
-}
-
-/*
- * Problem #1
- * Victor Abrego - 05/25/2020
- */
-void costoDeLapices() {
-    int cantidadLapices;
-    float precioTotal;
-
-    printf("\n\nIntroducir la cantidad de lapices a pagar: ");
-    scanf("%i", &cantidadLapices);
-
-    if (cantidadLapices >= 1000) {
-        precioTotal = cantidadLapices * 0.85;
-    } else {
-        precioTotal = cantidadLapices * 0.90;
-    }
-    printf("El total a pagar por %i lapices es %.2f", cantidadLapices, precioTotal);
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #2
- * Victor Abrego - 05/25/2020
- */
-void almacenFactory() {
-    float precioDelTraje, precioTotal, precioConDescuento;
-
-    printf("\n\nIntroduzca el costo del traje que desea comprar: ");
-    scanf("%f", &precioDelTraje);
-
-    // TODO: Mostrar el precio con decimales
-    if (precioDelTraje > 2500) {
-        precioConDescuento = precioDelTraje * 0.15;
-        precioTotal = precioDelTraje - precioConDescuento;
-        printf("El precio total del traje es: %.2f debido a que tiene un 15 porciento de descuento.", precioTotal);
-    } else {
-        precioConDescuento = precioDelTraje * 0.08;
-        precioTotal = precioDelTraje - precioConDescuento;
-        printf("El precio total del traje es: %.2f debido a que tiene un 8 porciento de descuento.", precioTotal);
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #3
- * Victor Abrego - 05/25/2020
- */
-void laDoniaRestaurante() {
-    int cantidadDePersonas;
-    float precioTotal;
-
-    printf("\n\nLa Doña\n");
-    printf("Tarifas\n");
-    printf(" * Platillo por  persona: $35.00\n");
-    printf(" * Platillo por persona $20.00. [Solo aplica si hay mas de 200 personas, aplica hasta 300.\n");
-    printf(" * Platillo por persona $15.00. [Solo aplica si hay mas de 300 personas.\n");
-    printf("\nIntroduzca la cantidad de personas que asistiran: ");
-    scanf("%i", &cantidadDePersonas);
-
-    if (cantidadDePersonas >= 200 && cantidadDePersonas <= 300) {
-        precioTotal = cantidadDePersonas * 20.00;
-    }
-    if (cantidadDePersonas >= 301) {
-        precioTotal = cantidadDePersonas * 15.00;
-    }
-    printf("Precio total a pagar por: %i invitados. USD$%.2f", cantidadDePersonas, precioTotal);
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #4
- * Victor Abrego - 05/25/2020
- */
-void vinicultores() {
-    int tipo, tamanio;
-    float precio, precioTotal;
-
-    printf("Precio inicial por kilo de uva: ");
-    scanf("%f", &precio);
-
-    printf("Introduzca el tipo de uva (1 o 2): ");
-    scanf("%i", &tipo);
-
-    printf("Introduzca el tamanio de la uva (1 o 2): ");
-    scanf("%i", &tamanio);
-
-    if (tipo == 1) {
-        if (tamanio == 1) {
-            precioTotal = precio + 0.20;
-            printf("El precio total a pagar es: USD$%.2f", precioTotal);
-        }
-        if (tamanio == 2) {
-            precioTotal = precio + 0.30;
-            printf("El precio total a pagar es: USD$%.2f", precioTotal);
-        }
-    }
-    if (tipo == 2) {
-        if (tamanio == 1) {
-            precioTotal = precio - 0.30;
-            printf("El precio total a pagar es: USD$%.2f", precioTotal);
-        }
-        if (tamanio == 2) {
-            precioTotal = precio - 0.50;
-            printf("El precio total a pagar es: USD$%.2f", precioTotal);
-        }
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #5
- * Victor Abrego - 05/25/2020
- */
-void viajeDeEstudios() {
-    int cantidadDeAlumnos;
-    float precioTotal;
-
-    printf("Introduzca la cantidad de alumnos que asistiran: ");
-    scanf("%i", &cantidadDeAlumnos);
-
-    if (cantidadDeAlumnos >= 100) {
-        precioTotal = cantidadDeAlumnos * 65.00;
-        printf("\nPrecio a pagar por alumno: USD$65.00\n");
-        printf("Precio total a pagar: USD$%.2f", precioTotal);
-    }
-    if (cantidadDeAlumnos >= 50 && cantidadDeAlumnos < 100) {
-        precioTotal = cantidadDeAlumnos * 70.00;
-        printf("\nPrecio a pagar por alumno: USD$70.00\n");
-        printf("Precio total a pagar: USD$%.2f", precioTotal);
-    }
-    if (cantidadDeAlumnos < 50 && cantidadDeAlumnos >= 30) {
-        precioTotal = cantidadDeAlumnos * 95.00;
-        printf("\nPrecio a pagar por alumno: USD$95.00\n");
-        printf("Precio total a pagar: USD$%.2f", precioTotal);
-    }
-    if (cantidadDeAlumnos < 30) {
-        precioTotal = cantidadDeAlumnos * 4000.00;
-        printf("\nPrecio a pagar por alumno: USD$4000.00\n");
-        printf("Precio total a pagar: USD$%.2f", precioTotal);
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #6
- * Victor Abrego - 05/25/2020
- */
-void enviosDePaquetesInternacionales() {
-    int zonaDeProcedencia;
-    float precio, peso, precioTotal;
-
-    printf("Introduzca el peso del paquete: ");
-    scanf("%f", &peso);
-
-    if (peso >= 5) {
-        printf("El peso del paquete excede los 5 kg's. El paquete sera rechazado.\nEste paquete no podra ser transportado por cuestiones de logistica y seguridad.");
-    } else {
-        printf("Introduzca el precio del paquete: ");
-        scanf("%f", &precio);
-
-        printf("Zonas de procedencia\n\n");
-        printf("1. America del Norte - $11.00 * gramo\n");
-        printf("2. America Central - $10.00 * gramo\n");
-        printf("3. America del Sur - $12.00 * gramo\n");
-        printf("4. Europa - $24.00 * gramo\n");
-        printf("5. Asia - $27.00 * gramo\n\n");
-        printf("Introduzca el numero de la zona de procedencia (1-5): ");
-        scanf("%i", &zonaDeProcedencia);
-
-        if (zonaDeProcedencia == 1) {
-            precioTotal = precio * 11.00;
-        }
-        if (zonaDeProcedencia == 2) {
-            precioTotal = precio * 10.00;
-        }
-        if (zonaDeProcedencia == 3) {
-            precioTotal = precio * 12.00;
-        }
-        if (zonaDeProcedencia == 4) {
-            precioTotal = precio * 24.00;
-        }
-        if (zonaDeProcedencia == 5) {
-            precioTotal = precio * 27.00;
-        }
-        printf("El precio total a pagar por el paquete es: USD$%.2f", precioTotal);
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #7
- * Victor Abrego - 05/25/2020
- */
-void estacionamientosEstablecimiento() {
-    int horasUsadas;
-    float precioTotal;
-
-    printf("Introduzca la cantidad de horas que has estado estacionado: ");
-    scanf("%i", &horasUsadas);
-
-    if (horasUsadas <= 2) {
-        precioTotal = 5.00 * horasUsadas;
-    }
-    if (horasUsadas >= 2 && horasUsadas <= 5) {
-        precioTotal = 4.00 * horasUsadas;
-    }
-    if (horasUsadas >= 5) {
-        precioTotal = 3.00 * horasUsadas;
-    }
-    printf("Precio total a pagar por las horas estacionadas: USD$%.2f", precioTotal);
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #8
- * Victor Abrego - 05/25/2020
- */
-void descubrirMenorEdad() {
-    int edadUno, edadDos, edadTres;
-    char nombreUno[64], nombreDos[64], nombreTres[64];
-
-    printf("Introduzca el nombre y la edad de la primera persona.\n");
-    printf("Nombre: ");
-    scanf("%s", &nombreUno);
-    printf("Edad: ");
-    scanf("%i", &edadUno);
-
-    printf("Introduzca el nombre y la edad de la segunda persona.\n");
-    printf("Nombre: ");
-    scanf("%s", &nombreDos);
-    printf("Edad: ");
-    scanf("%i", &edadDos);
-
-    printf("Introduzca el nombre y la edad de la tercera persona.\n");
-    printf("Nombre: ");
-    scanf("%s", &nombreTres);
-    printf("Edad: ");
-    scanf("%i", &edadTres);
-
-    if (edadUno < edadDos && edadUno < edadTres) {
-        printf("%s es menor que los demas y tiene %i anios", nombreUno, edadUno);
-    }
-    if (edadDos < edadUno && edadDos < edadTres) {
-        printf("%s es menor que los demas y tiene %i anios", nombreDos, edadDos);
-    }
-    if (edadTres < edadUno && edadTres < edadDos) {
-        printf("%s es menor que los demas y tiene %i anios", nombreTres, edadTres);
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #9
- * Victor Abrego - 05/25/2020
- */
-void becaUniversitaria() {
-    int edad;
-    float indice;
-
-    printf("Introduzca del edad del estudiante: ");
-    scanf("%i", &edad);
-
-    printf("Introduzca el indice academico del estudiante: ");
-    scanf("%f", &indice);
-
-    if (edad >= 19) {
-        if (indice >= 2.5) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$2,000.00");
-        }
-        if (indice >= 2.0 && indice < 2.5) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$1,000.00");
-        }
-        if (indice >= 1.85 && indice <= 1.99) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$500.00");
-        }
-        if (indice < 1.85) {
-            printf("Le incitamos a que estudie mas para la proxima entrega de becas universitarias!");
-        }
-    }
-    if (edad <= 18) {
-        if (indice >= 4.7) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$3,000.00");
-        }
-        if (indice >= 4.5 && indice <= 4.6) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$2,000.00");
-        }
-        if (indice >= 4.0 && indice <= 4.4) {
-            printf("En base a su indice, usted recibira una beca en concepto de USD$100.00");
-        }
-        if (indice < 4.0) {
-            printf("Le incitamos a que estudie mas para el proximo ciclo escolar!");
-        }
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-/*
- * Problem #10
- * Victor Abrego - 05/25/2020
- */
-void sueldoSemanal() {
-    int horasTrabajadas, horasExtrasTrabajadas;
-    float pagoPorHora, pagoNeto, pagoBase, pagoExtra;
-
-    printf("Introduzca la cantidad de horas que ha trabajado durante la semana (0-40): ");
-    scanf("%i", &horasTrabajadas);
-
-    printf("Introduzca la cantidad de horas extras totales que ha trabajado durante la semana: ");
-    scanf("%i", &horasExtrasTrabajadas);
-
-    printf("Introduzca su salario por hora: ");
-    scanf("%f", &pagoPorHora);
-
-    horasTrabajadas = horasTrabajadas + horasExtrasTrabajadas;
-
-    if (horasTrabajadas <= 40) {
-        pagoNeto = horasTrabajadas * pagoPorHora;
-        printf("Has ganado USD$%.2f por trabajar durante %i horas.", pagoNeto, horasTrabajadas);
-    }
-    if (horasTrabajadas >= 41 && horasTrabajadas <= 45) {
-        pagoBase = (horasTrabajadas - horasExtrasTrabajadas) * pagoPorHora;
-        pagoExtra = (horasTrabajadas - 40) * pagoPorHora * 2;
-        pagoNeto = pagoExtra + pagoBase;
-        system("cls");
-        printf("Trabajaste 2 horas extras, por lo tanto se te pagaran las horas extras al doble!");
-        printf("\nTus horas extras trabajadas equivalen a USD$%.2f,", pagoExtra);
-        printf("\nTu salario base equivale a USD$%.2f", pagoBase);
-        printf("\nTu salario neto equivale a USD$%.2f", pagoNeto);
-        printf("\nTrabajaste durante un total de %i horas!", horasTrabajadas);
-    }
-    if (horasTrabajadas >= 46 && horasTrabajadas <= 50) {
-        pagoBase = (horasTrabajadas - horasExtrasTrabajadas) * pagoPorHora;
-        pagoExtra = (horasTrabajadas - 40) * pagoPorHora * 3;
-        pagoNeto = pagoExtra + pagoBase;
-        system("cls");
-        printf("Trabajaste 2 horas extras, por lo tanto se te pagaran las horas extras al triple!");
-        printf("\nTus horas extras trabajadas equivalen a USD$%.2f,", pagoExtra);
-        printf("\nTu salario base equivale a USD$%.2f", pagoBase);
-        printf("\nTu salario neto equivale a USD$%.2f", pagoNeto);
-        printf("\nTrabajaste durante un total de %i horas!", horasTrabajadas);
-    }
-    if (horasTrabajadas > 51) {
-        system("cls");
-        printf("Trabajar mas de 50 horas no esta permitido!\nVaya a descansar en su casa.");
-    }
-
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
-}
-
-void consumoDeAgua() {
-    int consumo;
-    float centesimos1 = 0.15, centesimos2 = 0.20, centesimos3 = 0.35, centesimos4 = 0.80, total;
-
-    printf("Consumo de agua");
-    printf("Cant de metros cubicos: ");
-    scanf("%d", &consumo);
-
-    if (consumo <= 100) {
-        total = consumo * centesimos1;
-        printf("Costo a pagar por el agua: USD$%.2f", total);
-    } else if (consumo > 100 && consumo <= 500) {
-        total = consumo * centesimos2;
-        printf("Costo a pagar por el agua: USD$%.2f", total);
-    } else if (consumo > 500 && consumo <= 1000) {
-        total = consumo * centesimos3;
-        printf("Costo a pagar por el agua: USD$%.2f", total);
-    } else if (consumo > 1000) {
-        total = consumo * centesimos4;
-        printf("Costo a pagar por el agua: USD$%.2f", total);
-    }
-    if ((consumo > 1 && consumo < 5) || consumo == 8) {
-        centesimos1 = 0.15;
-    }
-    if (consumo > 1) if (consumo < 50 || consumo >= 8) centesimos1 = 5.89 * sqrt(6);
 }
 
 // Problema 1
@@ -622,9 +148,10 @@ void numeroMayor() {
 void sumaDeNumeros() {
     int numero, sumaGuardada = 0;
 
-    printf("Introduzca 10 numeros. Todos estos numeros seran sumados.");
+    printf("Introduzca 10 numeros\nTodos estos numeros seran sumados.");
 
     for (int i = 0; i <= 10; i++) {
+        printf("\n\nNumero: ");
         scanf("%i", &numero);
         printf("\nNumero ingresado: %i", numero);
         sumaGuardada = sumaGuardada + numero;
@@ -858,26 +385,9 @@ void distanciaEntreCarreteras() {
 }
 
 // Problema 11
-// Coding
-void horaHomo() {
-    int hora;
-    scanf("%i", &hora);
-    if (hora >= 0 && hora <= 12) {
-        printf("Buenos dias");
-        if (hora > 12 && hora <= 18) {
-            printf("Buenas tardes");
-            if (hora > 18 && hora <= 24) {
-                printf("Buenas noches");
-                if (hora <= 0 && hora >= 24) {
-                    printf("Hora no valida");
-                }
-            }
-        }
-    }
+// In Development
+void tikiTaka() {
 
-    getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
-    main();
 }
 
 // Problema 12
