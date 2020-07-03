@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <math.h>
+#include <io.h>
+#include <string.h>
 
 void numeroMayor();
 void sumaDeNumeros();
@@ -220,22 +222,24 @@ void estaturaPromedio() {
 }
 
 // Problema 5
-// TODO: Verificar y corregir si no sirve como debe ser
+// Funciona
 void ahorroPorAnio() {
-    int acum, dinero;
+    float dinero, ahorrado = 0;
 
-    for (int meses = 0; meses <= 12; meses++) {
-        printf("\n\nIntroduzca la cantidad de dinero que desea ahorrar este mes: ");
-        scanf("%i", &dinero);
-        printf("\nEste mes has ahorrado: %i", dinero);
-        acum = dinero + acum;
+    for (int m = 1; m <= 12; m++) {
+        printf("\nIntroduzca la cantidad de dinero que desea ahorrar este mes: ");
+        scanf("%f", &dinero);
+        printf("\nCantidad de dinero ahorrada este mes: USD$%.2f", dinero);
+        ahorrado = ahorrado + dinero;
     }
 
-    printf("\nHas ahorrado %i", acum);
+    printf("\n\n\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    printf("\nHas ahorrado: USD$:%.2f", ahorrado);
     printf(" en un lapso de 12 meses!");
+    printf("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -304,66 +308,48 @@ void sucesionFibonacci() {
 }
 
 // Problema 9
-// TODO: Arreglar el guardado de dinero
+// Funciona
 void registroDeHoras() {
-    int horas = 0, gHoras = 0, dias;
-    float salario = 0.0, pago = 0.0;
+    int horas = 0, hrsAcum = 0;
+    float salario = 0, pago = 0;
+    char nombreDelDia[16];
 
-    printf("\nIntroduzca lo que cobra por hora: ");
+    printf("\nIntroduzca su salario por hora: ");
     scanf("%f", &salario);
 
-    for (int i = 0; i < 6; i++) {
-        printf("\nIntroduzca el numero del dia [1 - 6] en el que trabajo (en orden): ");
-        scanf("%i", &dias);
-        gHoras = gHoras + horas;
-        switch (dias) {
+    for (int d = 1; d <= 6; d++) {
+        switch (d) {
             case 1:
-                printf("\n\nIntroduzca cuantas horas trabajo el lunes: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nLunes (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Lunes");
                 break;
             case 2:
-                printf("\n\nIntroduzca cuantas horas trabajo el martes: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nMartes (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Martes");
                 break;
             case 3:
-                printf("\n\nIntroduzca cuantas horas trabajo el miercoles: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nMiercoles (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Miercoles");
                 break;
             case 4:
-                printf("\n\nIntroduzca cuantas horas trabajo el jueves: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nJueves (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Jueves");
                 break;
             case 5:
-                printf("\n\nIntroduzca cuantas horas trabajo el viernes: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nViernes (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Viernes");
                 break;
             case 6:
-                printf("\n\nIntroduzca cuantas horas trabajo el sabado: ");
-                scanf("%i", &horas);
-                //pago = salario * horas;
-                printf("\nSabado (%i", horas);
-                printf(" horas trabajadas). Recibira USD$%.2f", pago);
+                strcpy(nombreDelDia, "Sabado");
                 break;
         }
+
+        printf("\nCuantas horas ha trabajado el %s", nombreDelDia);
+        printf("?");
+        printf("\nHoras trabajadas: ");
+        scanf("%i", &horas);
+        hrsAcum = hrsAcum + horas;
     }
 
-    printf("\n\n\nTotal de horas trabajadas durante la semana: %i", gHoras);
-    printf("\nPago total en base a las horas trabajadas: %.2f", pago);
+    pago = salario * hrsAcum;
+
+    printf("\n\n\nTotal de horas trabajadas durante la semana: %i", hrsAcum);
+    printf("\nPago total en base a las horas trabajadas: USD$%.2f", pago);
 
     getch();
     printf("Presione cualquier tecla para regresar al menu principal.");
