@@ -15,4 +15,8 @@ conio.h
 -
 math.h
 -
+io.h
+-
+string.h
+-
 
