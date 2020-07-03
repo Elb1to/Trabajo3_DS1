@@ -140,8 +140,8 @@ void numeroMayor() {
 
     printf("\nEl numero mas grande es: %i", mayor);
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -160,8 +160,8 @@ void sumaDeNumeros() {
         printf("\nNuevo total: %i", sumaGuardada);
     }
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -216,8 +216,8 @@ void estaturaPromedio() {
     printf("\nCantidad de estaturas introducidas: %i", cantidad);
     printf("\nEstatura promedio: %.2f", promedio);
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -238,8 +238,8 @@ void ahorroPorAnio() {
     printf(" en un lapso de 12 meses!");
     printf("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
-    getch();
     printf("\n\nPresione cualquier tecla para regresar al menu principal.");
+    getch();
     main();
 }
 
@@ -263,8 +263,8 @@ void diferenciasDeNumeros() {
     printf("\n\nTotal de numeros negativos: %i", saveN);
     printf("\n\nTotal de numeros positivos: %i", saveP);
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -279,8 +279,8 @@ void numeroPares() {
         printf("  %i", par);
     }
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -302,8 +302,8 @@ void sucesionFibonacci() {
         fibo2 = fibo3;
     }
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -351,8 +351,8 @@ void registroDeHoras() {
     printf("\n\n\nTotal de horas trabajadas durante la semana: %i", hrsAcum);
     printf("\nPago total en base a las horas trabajadas: USD$%.2f", pago);
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
@@ -365,15 +365,21 @@ void distanciaEntreCarreteras() {
     printf("\nLa persona #1 se encontrara con la persona #2 en el kilometro: %i", interseccion);
     printf(" de la carretera.");
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
 // Problema 11
 // In Development
 void tikiTaka() {
+    /*
+     * TODO: Write code xdxdxdx xD
+     */
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
+    getch();
+    main();
 }
 
 // Problema 12
@@ -389,37 +395,43 @@ void pagoEnCuotas() {
     pagoTotal = (pago * 2) - 10;
     printf("\n\nEl pago total es: USD$%.2f", pagoTotal);
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
 // Problema 13
 // Coding
 void pagoDeEmpresaPorSueldoSemanal() {
-    //TODO: Write code xd
+    /*
+     * TODO: Write code xdxdxdx xD
+     */
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
 // Problema 14
 // Coding
 void interesesBancarios() {
-    //TODO: Write code xd
+    /*
+     * TODO: Write code xdxdxdx xD
+     */
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
 
 // Problema 15
 // Coding
 void gerenteDeCompania() {
-    //TODO: Write code xd
+    /*
+     * TODO: Write code xdxdxdx xD
+     */
 
+    printf("\n\nPresione cualquier tecla para regresar al menu principal.");
     getch();
-    printf("Presione cualquier tecla para regresar al menu principal.");
     main();
 }
